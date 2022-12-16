@@ -1,10 +1,11 @@
+
+
 ### Step 1 - Store data in a .txt
 
 ## This step's instructions explains how to use the open() function, to write and read info from a .txt file. 
 # Follow the instructions to create and call a function to add a book, based off of the previous dictionaries for our library, 
 # to the .txt file properly formatted with commas as separators.
 
-# Code here
 
 
 ### Step 2 - Read data from a .txt
