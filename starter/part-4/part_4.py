@@ -136,7 +136,6 @@ library = [ {
 # and continually asking for input until the user chooses to exit the program. 
 # Call the main menu to ensure it functions properly.
 
-# Code here
 
 def main_menu():
 
