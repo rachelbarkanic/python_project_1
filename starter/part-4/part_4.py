@@ -157,5 +157,3 @@ def main_menu():
         else:
             print("You must pick a number 1-3")
 
-if __name__ == "__main__":
-    main_menu("library.txt")
