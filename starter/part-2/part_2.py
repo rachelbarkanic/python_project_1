@@ -74,7 +74,7 @@ for person in my_authors:
 for author in author_tuple:
     print(author)
 
-for person in author_set:
+for author in author_set:
     print(author)
 
 # Example:

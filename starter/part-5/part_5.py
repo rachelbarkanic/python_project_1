@@ -6,12 +6,78 @@
 # Follow the instructions to create and call a function to add a book, based off of the previous dictionaries for our library, 
 # to the .txt file properly formatted with commas as separators.
 
+library = [ {
+    "title": "East of Eden",
+    "author": "John Steinbeck",
+    "year": 1952,
+    "rating": 4.4,
+    "pages": 612
+},
 
+{
+    "title": "Before We Were Yours",
+    "author": "Lisa Wingate",
+    "year": 2017,
+    "rating": 4.4,
+    "pages": 354
+},
+
+{
+    "title": "The Nightingale",
+    "author": "Kristin Hannah",
+    "year": 2015,
+    "rating": 4.6,
+    "pages": 502
+} ]
+
+
+
+# def new_book(txt_file):
+#     title = input("What is the name of the book you would like to add? ")
+#     author = input("Who wrote the book you are adding? ")
+#     try:
+#         year = int(input("What year was this book published? "))
+#     except:
+#          year = int(input("Please type a number for the year? "))
+#     try:
+#         rating = float(input("What would you rate this book out of 5? "))
+#     except:
+#         rating = float(input("Please type a number for the rating. "))
+#     try:
+#         pages = int(input("How many pages long is this book? "))
+#     except:
+#         pages = int(input("Please type a number for the amount of pages. "))
+
+#     with open(“library.txt”, “a”) as file:
+#         file.write(f“{title}, {author}, {year}, {rating}, {pages}\n”)
+
+
+def new_book():
+        title = input("\nWhat is the title of the book you would like to add? ")
+        author = input("Who wrote the book you are adding? ")
+        try:
+            year = int(input("What year was this book published? "))
+        except:
+            year = int(input("Please type a number for the year? "))
+        try:
+            rating = float(input("What would you rate this book out of 5? "))
+        except:
+            rating = float(input("Please type a number for the rating. "))
+        try:
+            pages = int(input("How many pages long is this book? "))
+        except:
+            pages = int(input("Please type a number for the amount of pages. "))
+
+        with open("library.txt", "a") as file:
+            file.write(f"{title}, {author}, {year}, {rating}, {pages}\n")
+
+
+new_book()
 
 ### Step 2 - Read data from a .txt
 
-## Now take your previously create function which prints info about all the books in your library, b
-# ut gets the info from a list, and make it work by reading the information in your home library's .txt document. 
+## Now take your previously create function which prints info about all the books in your library, but gets the info from a list, 
+# and make it work by reading the information in your home library's .txt document. 
 # This will take some new logic, but you can do it.
 
 # Code here
