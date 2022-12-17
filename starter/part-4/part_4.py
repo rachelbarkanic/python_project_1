@@ -157,3 +157,4 @@ def main_menu():
         else:
             print("You must pick a number 1-3")
 
+main_menu()
