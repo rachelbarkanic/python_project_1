@@ -168,7 +168,7 @@ def main_menu(library):
             print("Thanks, Bye")
             menu_run = False
         else:
-            print("You must pick a number 1-6")
+            print("You must pick a number 1-7")
 
 if __name__ == "__main__":
     main_menu("library.txt")
