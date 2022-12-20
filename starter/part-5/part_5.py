@@ -85,11 +85,10 @@ def book_list():
 ## Now follow the instructions in this final step. Expand your project. Clean up the code. Make your application functional. Great job getting your first Python application finished!
 
 books= []
-# made global to use in another func
+# made global to use in multiple funcs
 
 def book_dictionaries(library):
-
-    # books= []
+# This function returns all of the books in the library as dictionaries
 
     with open('library.txt', "r") as f:
         file = f.readlines()
@@ -108,6 +107,7 @@ book_dictionaries('library.txt')
 
 
 def title_with_rating():
+# This function returns all book titles with their rating
     with open("library.txt", "r") as f:
         file = f.readlines()
 
@@ -117,6 +117,7 @@ def title_with_rating():
             print(f"Book Title: {title}, Rating: {rating},")
 
 def total_pages(books):
+#This function returns the total number of pages in the library
     pages = 0
 
     for book in books:
@@ -133,7 +134,14 @@ def books_over_rating(rating):
             rating_list.append(book['title'])
     return rating_list
 
-print(books_over_rating(4.8))
+def books_under_rating(rating):
+# This function returns the titles of all books lower than the rating inputted by the user
+    ratings = []
+
+    for book in books:
+        if int(book['rating']) < rating:
+            ratings.append(book['title'])
+    return ratings
 
 
 def main_menu(library):
@@ -141,7 +149,7 @@ def main_menu(library):
     menu_run = True
     
     while menu_run:
-        opt = int(input("Enter:\n 1 to add a new book,\n 2 to see all of the books in the library,\n 3 to see all of the book titles with their rating,\n 4 to get the total number of pages in the library,\n 5 to get a list of book titles over the rating of your choice,\n or 6 for none of the above "))
+        opt = int(input("Enter:\n 1 to add a new book,\n 2 to see all of the books in the library,\n 3 to see all of the book titles with their rating,\n 4 to get the total number of pages in the library,\n 5 to get a list of book titles at or over the rating of your choice, \n 6 to get a list of books lower than the rating of your choioce, \n 7 to quit "))
         if opt == 1:
             new_book()
         elif opt == 2:
@@ -154,6 +162,9 @@ def main_menu(library):
             rating = float(input('Enter a rating from 1.0 to 5.0 to see what books are rated at that level or higher! '))
             print(books_over_rating(rating))
         elif opt == 6:
+            rating = float(input('Enter a rating from 1.0 to 5.0 to see what books are rated lower than your number! '))
+            print(books_under_rating(rating))
+        elif opt == 7:
             print("Thanks, Bye")
             menu_run = False
         else:
